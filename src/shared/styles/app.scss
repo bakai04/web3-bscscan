@@ -1,0 +1,51 @@
+@import "font.scss";
+@import "theme.scss";
+
+html {
+  touch-action: manipulation;
+  font-feature-settings: "rlig" 1, "calt" 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--font-family);
+}
+
+body {
+  --color: var(--foreground);
+
+  background: var(--background);
+  color: var(--color);
+  font-family: var(--font-family);
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #42423F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--foreground);
+  border: 2px;
+  border-radius: 5px;
+}
