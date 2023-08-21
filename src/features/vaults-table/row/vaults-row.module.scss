@@ -1,16 +1,10 @@
 .table__cell {
   flex: 1 1 150px;
   padding: 0 10px;
-  max-width: 222px;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  max-width: 250px;
+  text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+  display: block;
   overflow-wrap: break-word;
-  word-break: keep-all;
-
-  display: flex;
-  align-items: center;
   gap: 20px;
   font-size: 16px;
   font-weight: 300;
