@@ -14,7 +14,7 @@ export const Header = () => {
     const fetchData = async () => {
       const balance = await getBalance(id || "");
       const bnbPrice = await getPriceUSD();
-      const balanceUsd = (Number(balance) * Number(bnbPrice)).toLocaleString();
+      const balanceUsd = (BigInt(+balance) * BigInt(bnbPrice)).toLocaleString();
       setBalanceUsd(balanceUsd);
       setBalance(balance)
     };
