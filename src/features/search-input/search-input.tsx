@@ -1,7 +1,7 @@
 import { Icon } from "../../shared/ui";
 import React, { ChangeEvent, KeyboardEvent, useEffect, useRef, useState } from 'react'
 import style from "./search-input.module.scss";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const SearchInput = () => {
   const { id } = useParams()
@@ -12,10 +12,6 @@ export const SearchInput = () => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   }
-
-  useEffect(()=>{
-    setValue(id);
-  }, [])
 
   const handleNavigate = () => {
     if (value && value?.length > 0) {

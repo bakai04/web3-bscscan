@@ -2,7 +2,7 @@ import { Header, Layout } from "../../widgets";
 import React, { useEffect, useState } from 'react'
 import { IColumn, ITableData, VaultsTable } from "../../features";
 import { Icon } from "../../shared/ui";
-import { getTransactionList, ITransaction } from "../../services";
+import { getTransactionList } from "../../services";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import moment from "moment";
 import style from "./main.module.scss"

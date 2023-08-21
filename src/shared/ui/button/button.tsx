@@ -1,5 +1,5 @@
 import cx from "classnames";
-import React, { ButtonHTMLAttributes, forwardRef, ReactElement, useState } from "react";
+import React, { ButtonHTMLAttributes, forwardRef } from "react";
 import styles from "./button.module.scss";
 
 export type IButton = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "type" | "prefix" | "suffix"> & {
