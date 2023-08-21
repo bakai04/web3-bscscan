@@ -13,7 +13,7 @@ export const getBalance = async (address:string) => {
 
 
 export const getPriceUSD = () => {
-  return getPrice('BNB', 'USDT').then(quote => Number(quote.price));
+  return getPrice('BNB', 'USDT').then(resp => Number(resp.price));
 }
 
 export const getPrice = async (token1: string, token2: string) => axios.get<AxiosError<{
@@ -22,4 +22,4 @@ export const getPrice = async (token1: string, token2: string) => axios.get<Axio
 }>,AxiosResponse<{
   price: string
   symbol: string
-}>>(`https://api.binance.com/api/v3/ticker/price?symbol=${token1}${token2}`).then(response => response.data);
+}>>(`https://api.binance.com/api/v3/ticker/price?symbol=${token1}${token2}`).then(resp => resp.data);
