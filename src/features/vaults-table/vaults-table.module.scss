@@ -1,0 +1,16 @@
+.table_container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 24px;
+}
+
+.table__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

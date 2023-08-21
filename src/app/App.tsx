@@ -1,4 +1,3 @@
-import { Header } from "../widgets";
 import React from 'react'
 import { BrowserRouter } from "react-router-dom";
 import { Router } from "./router";
@@ -8,7 +7,6 @@ function App() {
   
   return (
     <BrowserRouter>
-      <Header/>
       <Router/>
     </BrowserRouter>
   )

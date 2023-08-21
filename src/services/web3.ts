@@ -1,3 +1,5 @@
+import axios, { AxiosError, AxiosResponse } from "axios";
+
 const { Web3 } = require("web3");
 
 const httpProvider = new Web3.providers.HttpProvider("https://bsc-dataseed1.binance.org/");
@@ -10,4 +12,14 @@ export const getBalance = async (address:string) => {
 };
 
 
+export const getPriceUSD = () => {
+  return getPrice('BNB', 'USDT').then(quote => Number(quote.price));
+}
 
+export const getPrice = async (token1: string, token2: string) => axios.get<AxiosError<{
+  code: number,
+  msg: string
+}>,AxiosResponse<{
+  price: string
+  symbol: string
+}>>(`https://api.binance.com/api/v3/ticker/price?symbol=${token1}${token2}`).then(response => response.data);

@@ -1,0 +1,20 @@
+.main {
+  padding: 20px 0;
+
+  .title {
+    font-weight: 300;
+  }
+  .pagin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .prev_svg {
+      transform: rotate(90deg);
+    }
+
+    .next_svg {
+      transform: rotate(-90deg);
+    }
+  }
+}
