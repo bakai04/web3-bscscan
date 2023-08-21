@@ -9,7 +9,6 @@ import style from "./main.module.scss"
 import { Button } from "../../shared/ui/button";
 const { Web3 } = require("web3");
 
-
 const columns: IColumn[] = [
   {
     header: "Hash",
